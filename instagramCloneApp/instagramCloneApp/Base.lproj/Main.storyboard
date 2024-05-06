@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Upload-->
+        <scene sceneID="HCe-Xc-GW6">
+            <objects>
+                <viewController id="sVS-xR-bTc" customClass="UploadViewController" customModule="instagramCloneApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ie8-La-ekt">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="select" translatesAutoresizingMaskIntoConstraints="NO" id="sW3-xX-UFq">
+                                <rect key="frame" x="44" y="171" width="305" height="288"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="comment" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gfE-cd-aO2">
+                                <rect key="frame" x="74" y="484" width="245" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="nly-WM-RcF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fon-8B-D8D">
+                                <rect key="frame" x="135" y="558" width="123" height="53"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="53" id="PjN-WB-CMZ"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Upload">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="22"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="actionUploadBtn:" destination="sVS-xR-bTc" eventType="touchUpInside" id="1lh-A6-pfX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="z2j-cB-pAh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="gfE-cd-aO2" firstAttribute="leading" secondItem="z2j-cB-pAh" secondAttribute="leading" constant="74" id="2j1-hQ-Ok7"/>
+                            <constraint firstItem="sW3-xX-UFq" firstAttribute="centerX" secondItem="gfE-cd-aO2" secondAttribute="centerX" id="84g-zA-jEC"/>
+                            <constraint firstItem="z2j-cB-pAh" firstAttribute="bottom" secondItem="fon-8B-D8D" secondAttribute="bottom" constant="192" id="DpH-b6-A6K"/>
+                            <constraint firstItem="sW3-xX-UFq" firstAttribute="leading" secondItem="z2j-cB-pAh" secondAttribute="leading" constant="44" id="JwC-ZY-AbN"/>
+                            <constraint firstItem="gfE-cd-aO2" firstAttribute="top" secondItem="sW3-xX-UFq" secondAttribute="bottom" constant="25" id="Pfd-aU-467"/>
+                            <constraint firstItem="fon-8B-D8D" firstAttribute="top" secondItem="gfE-cd-aO2" secondAttribute="bottom" constant="40" id="USW-up-PDY"/>
+                            <constraint firstItem="sW3-xX-UFq" firstAttribute="top" secondItem="z2j-cB-pAh" secondAttribute="top" constant="171" id="WGb-CC-d8F"/>
+                            <constraint firstItem="gfE-cd-aO2" firstAttribute="centerX" secondItem="fon-8B-D8D" secondAttribute="centerX" id="ghl-qU-1eZ"/>
+                            <constraint firstItem="sW3-xX-UFq" firstAttribute="centerX" secondItem="ie8-La-ekt" secondAttribute="centerX" id="pjU-aD-Wso"/>
+                            <constraint firstItem="fon-8B-D8D" firstAttribute="leading" secondItem="z2j-cB-pAh" secondAttribute="leading" constant="135" id="ugH-c2-Dhg"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Upload" image="photo.circle" catalog="system" id="WQX-P6-CSm"/>
+                    <connections>
+                        <outlet property="commentText" destination="gfE-cd-aO2" id="uzD-LM-WVk"/>
+                        <outlet property="imageView" destination="sW3-xX-UFq" id="lVw-vH-zEl"/>
+                        <outlet property="uploadBtn" destination="fon-8B-D8D" id="V79-ee-8To"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0tq-oy-ite" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-573.28244274809163" y="348.59154929577466"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="kiO-h3-WnC">
+            <objects>
+                <viewController id="HGr-ou-7h8" customClass="SettingsViewController" customModule="instagramCloneApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3o2-pn-oLz">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fdr-JT-Bky">
+                                <rect key="frame" x="144" y="601" width="105" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Logout"/>
+                                <connections>
+                                    <action selector="logoutBtn:" destination="HGr-ou-7h8" eventType="touchUpInside" id="fnL-JO-vdN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="MBX-QS-RPm"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Settings" image="gearshape" catalog="system" id="wY4-rt-vCv"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="toVC" modalPresentationStyle="fullScreen" id="O4k-iN-u3b"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I0a-PH-ytg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1463.3587786259541" y="710.56338028169023"/>
+        </scene>
+        <!--Feed-->
+        <scene sceneID="YWL-N4-cOg">
+            <objects>
+                <viewController id="2Kr-Ms-hLo" customClass="FeedViewController" customModule="instagramCloneApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QAk-K0-J6C">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="QFK-Qr-yWt"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Feed" image="flame.fill" catalog="system" id="0x6-Ic-tYC"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L94-WG-Fi9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-558" y="-313"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="5bx-S6-wYD">
+            <objects>
+                <tabBarController storyboardIdentifier="tabBar" id="EPU-9f-aw5" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="EPA-UU-tL7"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="die-mF-RLb">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
+                        <color key="tintColor" systemColor="systemYellowColor"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="2Kr-Ms-hLo" kind="relationship" relationship="viewControllers" id="pid-qh-3UR"/>
+                        <segue destination="sVS-xR-bTc" kind="relationship" relationship="viewControllers" id="rM9-da-XMZ"/>
+                        <segue destination="HGr-ou-7h8" kind="relationship" relationship="viewControllers" id="wGf-CD-6lI"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LoR-un-BUr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1462" y="-9"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="instagramCloneApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="e mail" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lRf-Zj-4tA">
+                                <rect key="frame" x="54" y="362" width="284" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AZ1-ip-1mm">
+                                <rect key="frame" x="54" y="428" width="284" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T7s-xn-nmm">
+                                <rect key="frame" x="247" y="505" width="91" height="38"/>
+                                <color key="backgroundColor" red="0.38696725030000001" green="0.32411544549999999" blue="0.86078912019999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="91" id="ny7-rX-pcg"/>
+                                </constraints>
+                                <color key="tintColor" red="0.82545795929999999" green="0.62628038900000005" blue="0.86078912019999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Sign in">
+                                    <fontDescription key="titleFontDescription" type="system" weight="heavy" pointSize="15"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="signBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gfu-cr-1Mi"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Dilostagram :)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="re4-Ho-3Eb">
+                                <rect key="frame" x="82" y="295" width="228" height="33"/>
+                                <color key="tintColor" red="0.82545795929999999" green="0.62628038900000005" blue="0.86078912019999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="9Wl-s4-c5s"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <color key="textColor" red="0.5745803245608867" green="0.37163607059938025" blue="0.86078912019999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="highlightedColor" red="0.82545795929999999" green="0.62628038900000005" blue="0.86078912019999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AN5-2i-4KC">
+                                <rect key="frame" x="54" y="505" width="91" height="38"/>
+                                <color key="backgroundColor" red="0.38696725030462381" green="0.32411544550626659" blue="0.86078912019729614" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="91" id="wIb-bv-eli"/>
+                                </constraints>
+                                <color key="tintColor" red="0.82545795925730381" green="0.62628038899278826" blue="0.86078912019729614" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Login">
+                                    <fontDescription key="titleFontDescription" type="system" weight="heavy" pointSize="15"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="loginBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BQF-q8-tqe"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.6783273108789194" green="0.70940078676079854" blue="0.86078912019729614" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="lRf-Zj-4tA" firstAttribute="leading" secondItem="AZ1-ip-1mm" secondAttribute="leading" id="1E7-Gn-qN8"/>
+                            <constraint firstItem="lRf-Zj-4tA" firstAttribute="trailing" secondItem="AZ1-ip-1mm" secondAttribute="trailing" id="1vK-SP-eOX"/>
+                            <constraint firstItem="AZ1-ip-1mm" firstAttribute="trailing" secondItem="T7s-xn-nmm" secondAttribute="trailing" id="7qZ-od-T9K"/>
+                            <constraint firstItem="AN5-2i-4KC" firstAttribute="baseline" secondItem="T7s-xn-nmm" secondAttribute="baseline" id="AJt-xz-Nkf"/>
+                            <constraint firstItem="AN5-2i-4KC" firstAttribute="top" secondItem="AZ1-ip-1mm" secondAttribute="bottom" constant="43" id="BTI-Zp-jHS"/>
+                            <constraint firstItem="AZ1-ip-1mm" firstAttribute="leading" secondItem="AN5-2i-4KC" secondAttribute="leading" id="Fvx-Vz-uhB"/>
+                            <constraint firstItem="re4-Ho-3Eb" firstAttribute="centerX" secondItem="lRf-Zj-4tA" secondAttribute="centerX" id="LWZ-pA-PhD"/>
+                            <constraint firstItem="AZ1-ip-1mm" firstAttribute="top" secondItem="lRf-Zj-4tA" secondAttribute="bottom" constant="32" id="LjI-Vx-tgp"/>
+                            <constraint firstItem="re4-Ho-3Eb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="82" id="NG6-AY-T9T"/>
+                            <constraint firstItem="lRf-Zj-4tA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="54" id="OWI-JY-F0h"/>
+                            <constraint firstItem="re4-Ho-3Eb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="acI-im-piL"/>
+                            <constraint firstItem="lRf-Zj-4tA" firstAttribute="top" secondItem="re4-Ho-3Eb" secondAttribute="bottom" constant="34" id="d8u-Xi-zJh"/>
+                            <constraint firstItem="re4-Ho-3Eb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="236" id="g8Y-Fn-Eo3"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="hUp-o7-XEP"/>
+                    <connections>
+                        <outlet property="mailText" destination="lRf-Zj-4tA" id="hmc-eb-zup"/>
+                        <outlet property="poasswordText" destination="AZ1-ip-1mm" id="IDY-tm-IXj"/>
+                        <segue destination="EPU-9f-aw5" kind="presentation" identifier="toFeedVC" modalPresentationStyle="fullScreen" id="gX0-aa-sma"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2391.6030534351144" y="-9.1549295774647899"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="flame.fill" catalog="system" width="106" height="128"/>
+        <image name="gearshape" catalog="system" width="128" height="123"/>
+        <image name="photo.circle" catalog="system" width="128" height="123"/>
+        <image name="select" width="446" height="370"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGroupedBackgroundColor">
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
