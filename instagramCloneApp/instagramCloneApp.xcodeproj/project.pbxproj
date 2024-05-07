@@ -16,7 +16,6 @@
 		112AD0762BE9034500C9D7DA /* instagramCloneAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112AD0752BE9034500C9D7DA /* instagramCloneAppTests.swift */; };
 		112AD0802BE9034500C9D7DA /* instagramCloneAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112AD07F2BE9034500C9D7DA /* instagramCloneAppUITests.swift */; };
 		112AD0822BE9034500C9D7DA /* instagramCloneAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112AD0812BE9034500C9D7DA /* instagramCloneAppUITestsLaunchTests.swift */; };
-		112AD08F2BE9043800C9D7DA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 112AD08E2BE9043800C9D7DA /* GoogleService-Info.plist */; };
 		112AD0922BE904E100C9D7DA /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 112AD0912BE904E100C9D7DA /* FirebaseAnalytics */; };
 		112AD0942BE904E100C9D7DA /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = 112AD0932BE904E100C9D7DA /* FirebaseAnalyticsOnDeviceConversion */; };
 		112AD0962BE904E100C9D7DA /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 112AD0952BE904E100C9D7DA /* FirebaseAnalyticsSwift */; };
@@ -47,6 +46,7 @@
 		112AD0C82BE9091100C9D7DA /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112AD0C72BE9091000C9D7DA /* UploadViewController.swift */; };
 		112AD0CA2BE9092700C9D7DA /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112AD0C92BE9092700C9D7DA /* SettingsViewController.swift */; };
 		112AD0CC2BE9093E00C9D7DA /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112AD0CB2BE9093E00C9D7DA /* FeedViewController.swift */; };
+		115D18582BEAEC440053DC14 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 115D18572BEAEC440053DC14 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,10 +80,10 @@
 		112AD07B2BE9034500C9D7DA /* instagramCloneAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = instagramCloneAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		112AD07F2BE9034500C9D7DA /* instagramCloneAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = instagramCloneAppUITests.swift; sourceTree = "<group>"; };
 		112AD0812BE9034500C9D7DA /* instagramCloneAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = instagramCloneAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		112AD08E2BE9043800C9D7DA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		112AD0C72BE9091000C9D7DA /* UploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
 		112AD0C92BE9092700C9D7DA /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		112AD0CB2BE9093E00C9D7DA /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		115D18572BEAEC440053DC14 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,7 +171,7 @@
 				112AD0672BE9034400C9D7DA /* Assets.xcassets */,
 				112AD0692BE9034400C9D7DA /* LaunchScreen.storyboard */,
 				112AD06C2BE9034400C9D7DA /* Info.plist */,
-				112AD08E2BE9043800C9D7DA /* GoogleService-Info.plist */,
+				115D18572BEAEC440053DC14 /* GoogleService-Info.plist */,
 			);
 			path = instagramCloneApp;
 			sourceTree = "<group>";
@@ -330,7 +330,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				112AD0682BE9034400C9D7DA /* Assets.xcassets in Resources */,
-				112AD08F2BE9043800C9D7DA /* GoogleService-Info.plist in Resources */,
+				115D18582BEAEC440053DC14 /* GoogleService-Info.plist in Resources */,
 				112AD06B2BE9034400C9D7DA /* Base in Resources */,
 				112AD0662BE9034300C9D7DA /* Base in Resources */,
 			);
@@ -547,6 +547,7 @@
 				DEVELOPMENT_TEAM = 2VVK6U6V2P;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = instagramCloneApp/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -557,7 +558,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.dilarabuker.instagramCloneApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dilarabuker.instagramCloneApp1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -575,6 +576,7 @@
 				DEVELOPMENT_TEAM = 2VVK6U6V2P;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = instagramCloneApp/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -585,7 +587,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.dilarabuker.instagramCloneApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dilarabuker.instagramCloneApp1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
